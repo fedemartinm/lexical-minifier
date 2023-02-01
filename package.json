@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "name": "lexical-minifier",
+  "description": "Lexical",
+  "type": "module",
+  "source": "./src/index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "exports": "./dist/index.modern.mjs",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedemartinm/lexical-minifier.git"
+  },
+  "author": "Fede Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fedemartinm/lexical-minifier/issues"
+  },
+  "homepage": "https://github.com/fedemartinm/lexical-minifier#readme",
+  "devDependencies": {
+    "@lexical/link": "^0.7.6",
+    "lexical": "^0.7.6",
+    "microbundle": "^0.15.1"
+  }
+}
