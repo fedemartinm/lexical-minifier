@@ -20,15 +20,15 @@ export interface MinifiedLexicalNode {
  * @property type - The string representing the original type (Y)
  * @property version - The number representing the version of the minification process (Z)
  */
-export type MinifierConfig<
+export interface MinifierConfig<
   X extends string,
   Y extends string,
   Z extends number,
-> = {
+> {
   minifiedType: X;
   type: Y;
   version: Z;
-};
+}
 
 /**
  * Defines the shape of an object for a minifier.
@@ -36,14 +36,14 @@ export type MinifierConfig<
  * @property minify - A function that takes in data of type `I` and returns the minified version of the data `O`
  * @property unminify - A function that takes in data of type `O` and returns the original version of the data `I`
  */
-export type Minifier<
+export interface Minifier<
   I = any,
   O = any,
   X extends string = string,
   Y extends string = string,
   Z extends number = number,
-> = {
+> {
   config: MinifierConfig<X, Y, Z>;
   minify: (data: I) => O;
   unminify: (data: O) => I;
-};
+}
