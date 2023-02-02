@@ -10,11 +10,8 @@
 ## Interfaces
 
 - [MinifiedLexicalNode](interfaces/MinifiedLexicalNode.md)
-
-## Type Aliases
-
-- [Minifier](types/Minifier.md)
-- [MinifierConfig](types/MinifierConfig.md)
+- [Minifier](interfaces/Minifier.md)
+- [MinifierConfig](interfaces/MinifierConfig.md)
 
 ## Functions
 

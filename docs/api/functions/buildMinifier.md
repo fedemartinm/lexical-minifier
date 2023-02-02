@@ -2,7 +2,7 @@
 
 # Function: buildMinifier
 
-▸ **buildMinifier**<`K`, `U`, `X`, `Y`, `Z`\>(`config`, `minifyFunc`, `unminifyFunc`): [`Minifier`](../types/Minifier.md)<`K`, `U`, `X`, `Y`, `Z`\>
+▸ **buildMinifier**<`K`, `U`, `X`, `Y`, `Z`\>(`config`, `minifyFunc`, `unminifyFunc`): [`Minifier`](../interfaces/Minifier.md)<`K`, `U`, `X`, `Y`, `Z`\>
 
 The `buildMinifier` function creates and returns an object that contains the necessary methods
 and information for performing minification and unminification on serialized lexical nodes.
@@ -28,14 +28,14 @@ with the MinifierConfig before applying the corresponding minification or unmini
 
 | Name | Type |
 | :------ | :------ |
-| `config` | `Readonly`<[`MinifierConfig`](../types/MinifierConfig.md)<`X`, `Y`, `Z`\>\> |
-| `minifyFunc` | (`data`: `K`, `metadata`: [`MinifierConfig`](../types/MinifierConfig.md)<`X`, `Y`, `Z`\>) => `U` |
-| `unminifyFunc` | (`data`: `U`, `metadata`: [`MinifierConfig`](../types/MinifierConfig.md)<`X`, `Y`, `Z`\>) => `K` |
+| `config` | `Readonly`<[`MinifierConfig`](../interfaces/MinifierConfig.md)<`X`, `Y`, `Z`\>\> |
+| `minifyFunc` | (`data`: `K`, `metadata`: [`MinifierConfig`](../interfaces/MinifierConfig.md)<`X`, `Y`, `Z`\>) => `U` |
+| `unminifyFunc` | (`data`: `U`, `metadata`: [`MinifierConfig`](../interfaces/MinifierConfig.md)<`X`, `Y`, `Z`\>) => `K` |
 
 #### Returns
 
-[`Minifier`](../types/Minifier.md)<`K`, `U`, `X`, `Y`, `Z`\>
+[`Minifier`](../interfaces/Minifier.md)<`K`, `U`, `X`, `Y`, `Z`\>
 
 #### Defined in
 
-[builder.ts:15](https://github.com/fedemartinm/lexical-minifier/blob/b9a31d8/src/builder.ts#L15)
+[builder.ts:15](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/builder.ts#L15)

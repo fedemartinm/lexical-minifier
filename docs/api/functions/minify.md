@@ -19,4 +19,4 @@ Takes a `LexicalNode` as an argument and returns a minified version of the seria
 
 #### Defined in
 
-[utils.ts:8](https://github.com/fedemartinm/lexical-minifier/blob/b9a31d8/src/utils.ts#L8)
+[utils.ts:8](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/utils.ts#L8)

@@ -1,8 +1,6 @@
 [Lexical Minifier API](../API.md) / [Exports](../modules.md) / Minifier
 
-# Type alias: Minifier<I, O, X, Y, Z\>
-
-Ƭ **Minifier**<`I`, `O`, `X`, `Y`, `Z`\>: `Object`
+# Interface: Minifier<I, O, X, Y, Z\>
 
 Defines the shape of an object for a minifier.
 
@@ -18,7 +16,7 @@ A function that takes in data of type `I` and returns the minified version of th
 
 A function that takes in data of type `O` and returns the original version of the data `I`
 
-#### Type parameters
+## Type parameters
 
 | Name | Type |
 | :------ | :------ |
@@ -27,15 +25,3 @@ A function that takes in data of type `O` and returns the original version of th
 | `X` | extends `string` = `string` |
 | `Y` | extends `string` = `string` |
 | `Z` | extends `number` = `number` |
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `config` | [`MinifierConfig`](MinifierConfig.md)<`X`, `Y`, `Z`\> |
-| `minify` | (`data`: `I`) => `O` |
-| `unminify` | (`data`: `O`) => `I` |
-
-#### Defined in
-
-[types.ts:39](https://github.com/fedemartinm/lexical-minifier/blob/b9a31d8/src/types.ts#L39)

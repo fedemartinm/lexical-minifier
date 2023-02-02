@@ -1,8 +1,6 @@
 [Lexical Minifier API](../API.md) / [Exports](../modules.md) / MinifierConfig
 
-# Type alias: MinifierConfig<X, Y, Z\>
-
-Ƭ **MinifierConfig**<`X`, `Y`, `Z`\>: `Object`
+# Interface: MinifierConfig<X, Y, Z\>
 
 Defines the shape of an object for configuration of a minifier.
 
@@ -21,22 +19,10 @@ The string representing the original type (Y)
 
 The number representing the version of the minification process (Z)
 
-#### Type parameters
+## Type parameters
 
 | Name | Type |
 | :------ | :------ |
 | `X` | extends `string` |
 | `Y` | extends `string` |
 | `Z` | extends `number` |
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `minifiedType` | `X` |
-| `type` | `Y` |
-| `version` | `Z` |
-
-#### Defined in
-
-[types.ts:23](https://github.com/fedemartinm/lexical-minifier/blob/b9a31d8/src/types.ts#L23)

@@ -8,7 +8,7 @@ The LexicalMinifier class provides a way to manage and access minifiers for lexi
 
 ### get
 
-▸ **get**(`type`): [`Minifier`](../types/Minifier.md)<`any`, `any`, `string`, `string`, `number`\>
+▸ **get**(`type`): [`Minifier`](../interfaces/Minifier.md)<`any`, `any`, `string`, `string`, `number`\>
 
 This method is used to retrieve a minifier for a specific lexical node. If a minifier
 for the specified type is registered, the method returns it, otherwise it returns the
@@ -22,17 +22,17 @@ default `noop` minifier.
 
 #### Returns
 
-[`Minifier`](../types/Minifier.md)<`any`, `any`, `string`, `string`, `number`\>
+[`Minifier`](../interfaces/Minifier.md)<`any`, `any`, `string`, `string`, `number`\>
 
 #### Defined in
 
-[lexical-minifier.ts:57](https://github.com/fedemartinm/lexical-minifier/blob/b9a31d8/src/lexical-minifier.ts#L57)
+[lexical-minifier.ts:57](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/lexical-minifier.ts#L57)
 
 ___
 
 ### getByMinifiedType
 
-▸ **getByMinifiedType**(`minifiedType`): [`Minifier`](../types/Minifier.md)<`any`, `any`, `string`, `string`, `number`\>
+▸ **getByMinifiedType**(`minifiedType`): [`Minifier`](../interfaces/Minifier.md)<`any`, `any`, `string`, `string`, `number`\>
 
 Retrieve the minifier for a given minified type. If a minifier is found, return it.
 Otherwise, return the default `noop` minifier.
@@ -45,11 +45,11 @@ Otherwise, return the default `noop` minifier.
 
 #### Returns
 
-[`Minifier`](../types/Minifier.md)<`any`, `any`, `string`, `string`, `number`\>
+[`Minifier`](../interfaces/Minifier.md)<`any`, `any`, `string`, `string`, `number`\>
 
 #### Defined in
 
-[lexical-minifier.ts:69](https://github.com/fedemartinm/lexical-minifier/blob/b9a31d8/src/lexical-minifier.ts#L69)
+[lexical-minifier.ts:69](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/lexical-minifier.ts#L69)
 
 ___
 
@@ -82,7 +82,7 @@ Register and replace are essentially the same method, the difference is in the t
 
 #### Defined in
 
-[lexical-minifier.ts:29](https://github.com/fedemartinm/lexical-minifier/blob/b9a31d8/src/lexical-minifier.ts#L29)
+[lexical-minifier.ts:29](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/lexical-minifier.ts#L29)
 
 ___
 
@@ -115,4 +115,4 @@ Register and replace are essentially the same method, the difference is in the t
 
 #### Defined in
 
-[lexical-minifier.ts:45](https://github.com/fedemartinm/lexical-minifier/blob/b9a31d8/src/lexical-minifier.ts#L45)
+[lexical-minifier.ts:45](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/lexical-minifier.ts#L45)

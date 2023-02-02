@@ -33,7 +33,7 @@ Constructor for initializing the LookupTable
 
 #### Defined in
 
-[lookups/lookup-table.ts:13](https://github.com/fedemartinm/lexical-minifier/blob/b9a31d8/src/lookups/lookup-table.ts#L13)
+[lookups/lookup-table.ts:13](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/lookups/lookup-table.ts#L13)
 
 ## Methods
 
@@ -57,7 +57,7 @@ The value associated with the given index, of type V
 
 #### Defined in
 
-[lookups/lookup-table.ts:23](https://github.com/fedemartinm/lexical-minifier/blob/b9a31d8/src/lookups/lookup-table.ts#L23)
+[lookups/lookup-table.ts:23](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/lookups/lookup-table.ts#L23)
 
 ___
 
@@ -81,4 +81,4 @@ The index associated with the given value, of type number
 
 #### Defined in
 
-[lookups/lookup-table.ts:32](https://github.com/fedemartinm/lexical-minifier/blob/b9a31d8/src/lookups/lookup-table.ts#L32)
+[lookups/lookup-table.ts:32](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/lookups/lookup-table.ts#L32)
