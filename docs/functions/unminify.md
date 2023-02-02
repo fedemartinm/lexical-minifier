@@ -1,4 +1,4 @@
-[Lexical Minifier API](../index.md) / unminify
+[Lexical Minifier API](../README.md) / unminify
 
 # Function: unminify
 
@@ -19,4 +19,4 @@ Takes a minified `LexicalNode` as an argument and returns the original, unminifi
 
 #### Defined in
 
-[utils.ts:30](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/utils.ts#L30)
+[utils.ts:30](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/utils.ts#L30)

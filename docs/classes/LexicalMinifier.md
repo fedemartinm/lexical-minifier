@@ -1,4 +1,4 @@
-[Lexical Minifier API](../index.md) / LexicalMinifier
+[Lexical Minifier API](../README.md) / LexicalMinifier
 
 # Class: LexicalMinifier
 
@@ -26,7 +26,7 @@ default `noop` minifier.
 
 #### Defined in
 
-[lexical-minifier.ts:57](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/lexical-minifier.ts#L57)
+[lexical-minifier.ts:57](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/lexical-minifier.ts#L57)
 
 ___
 
@@ -49,7 +49,7 @@ Otherwise, return the default `noop` minifier.
 
 #### Defined in
 
-[lexical-minifier.ts:69](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/lexical-minifier.ts#L69)
+[lexical-minifier.ts:69](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/lexical-minifier.ts#L69)
 
 ___
 
@@ -82,7 +82,7 @@ Register and replace are essentially the same method, the difference is in the t
 
 #### Defined in
 
-[lexical-minifier.ts:29](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/lexical-minifier.ts#L29)
+[lexical-minifier.ts:29](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/lexical-minifier.ts#L29)
 
 ___
 
@@ -115,4 +115,4 @@ Register and replace are essentially the same method, the difference is in the t
 
 #### Defined in
 
-[lexical-minifier.ts:45](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/lexical-minifier.ts#L45)
+[lexical-minifier.ts:45](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/lexical-minifier.ts#L45)

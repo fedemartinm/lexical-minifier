@@ -1,4 +1,4 @@
-[Lexical Minifier API](../index.md) / Minifier
+[Lexical Minifier API](../README.md) / Minifier
 
 # Interface: Minifier<I, O, X, Y, Z\>
 

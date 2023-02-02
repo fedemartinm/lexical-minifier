@@ -1,4 +1,4 @@
-[Lexical Minifier API](../index.md) / LookupTable
+[Lexical Minifier API](../README.md) / LookupTable
 
 # Class: LookupTable<V\>
 
@@ -33,7 +33,7 @@ Constructor for initializing the LookupTable
 
 #### Defined in
 
-[lookups/lookup-table.ts:15](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/lookups/lookup-table.ts#L15)
+[lookups/lookup-table.ts:15](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/lookups/lookup-table.ts#L15)
 
 ## Methods
 
@@ -57,7 +57,7 @@ The value associated with the given index, of type V
 
 #### Defined in
 
-[lookups/lookup-table.ts:25](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/lookups/lookup-table.ts#L25)
+[lookups/lookup-table.ts:25](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/lookups/lookup-table.ts#L25)
 
 ___
 
@@ -81,4 +81,4 @@ The index associated with the given value, of type number
 
 #### Defined in
 
-[lookups/lookup-table.ts:34](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/lookups/lookup-table.ts#L34)
+[lookups/lookup-table.ts:34](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/lookups/lookup-table.ts#L34)

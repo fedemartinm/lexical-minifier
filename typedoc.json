@@ -1,6 +1,6 @@
  {
   "theme": "markdown",
-  "entryDocument":"index.md",
+  "entryDocument":"README.md",
   "readme": "none",
   "name":"Lexical Minifier API",
   "excludePrivate": true,
@@ -9,7 +9,7 @@
   "excludeNotDocumented": true,
   "hideMembersSymbol":false,
   "githubPages": false,
-  "out": "docs/api",
+  "out": "docs",
   "entryPoints":["./src/index.ts"],
   "hideInPageTOC":true,
   "allReflectionsHaveOwnDocument":true,

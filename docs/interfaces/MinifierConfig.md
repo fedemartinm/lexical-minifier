@@ -1,4 +1,4 @@
-[Lexical Minifier API](../index.md) / MinifierConfig
+[Lexical Minifier API](../README.md) / MinifierConfig
 
 # Interface: MinifierConfig<X, Y, Z\>
 
