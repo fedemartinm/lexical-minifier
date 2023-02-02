@@ -1,4 +1,4 @@
-[Lexical Minifier API](../API.md) / [Exports](../modules.md) / Minifier
+[Lexical Minifier API](../index.md) / Minifier
 
 # Interface: Minifier<I, O, X, Y, Z\>
 

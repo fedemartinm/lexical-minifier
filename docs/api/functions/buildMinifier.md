@@ -1,4 +1,4 @@
-[Lexical Minifier API](../API.md) / [Exports](../modules.md) / buildMinifier
+[Lexical Minifier API](../index.md) / buildMinifier
 
 # Function: buildMinifier
 
@@ -38,4 +38,4 @@ with the MinifierConfig before applying the corresponding minification or unmini
 
 #### Defined in
 
-[builder.ts:15](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/builder.ts#L15)
+[builder.ts:15](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/builder.ts#L15)

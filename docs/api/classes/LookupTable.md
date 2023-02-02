@@ -1,4 +1,4 @@
-[Lexical Minifier API](../API.md) / [Exports](../modules.md) / LookupTable
+[Lexical Minifier API](../index.md) / LookupTable
 
 # Class: LookupTable<V\>
 
@@ -7,9 +7,9 @@ It provides two methods, `fromKey` and `toKey`, to perform the mapping between a
 
 ## Type parameters
 
-| Name |
-| :------ |
-| `V` |
+| Name | Description |
+| :------ | :------ |
+| `V` | Represents the type of values that will be mapped in the LookupTable |
 
 ## Constructors
 
@@ -33,7 +33,7 @@ Constructor for initializing the LookupTable
 
 #### Defined in
 
-[lookups/lookup-table.ts:13](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/lookups/lookup-table.ts#L13)
+[lookups/lookup-table.ts:15](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/lookups/lookup-table.ts#L15)
 
 ## Methods
 
@@ -57,7 +57,7 @@ The value associated with the given index, of type V
 
 #### Defined in
 
-[lookups/lookup-table.ts:23](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/lookups/lookup-table.ts#L23)
+[lookups/lookup-table.ts:25](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/lookups/lookup-table.ts#L25)
 
 ___
 
@@ -81,4 +81,4 @@ The index associated with the given value, of type number
 
 #### Defined in
 
-[lookups/lookup-table.ts:32](https://github.com/fedemartinm/lexical-minifier/blob/0ba7251/src/lookups/lookup-table.ts#L32)
+[lookups/lookup-table.ts:34](https://github.com/fedemartinm/lexical-minifier/blob/98a2372/src/lookups/lookup-table.ts#L34)

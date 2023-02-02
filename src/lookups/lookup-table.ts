@@ -1,6 +1,8 @@
 /**
  * The LookupTable class is a generic data structure used to map between a set of values `V` and an index `number`.
  * It provides two methods, `fromKey` and `toKey`, to perform the mapping between an index and a value and vice versa.
+ *
+ * @template V - Represents the type of values that will be mapped in the LookupTable
  */
 export class LookupTable<V> {
   private readonly kToV: Map<number, V>;

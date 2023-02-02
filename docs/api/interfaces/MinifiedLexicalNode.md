@@ -1,4 +1,4 @@
-[Lexical Minifier API](../API.md) / [Exports](../modules.md) / MinifiedLexicalNode
+[Lexical Minifier API](../index.md) / MinifiedLexicalNode
 
 # Interface: MinifiedLexicalNode
 

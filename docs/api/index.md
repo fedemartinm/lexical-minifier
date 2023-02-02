@@ -1,4 +1,4 @@
-[Lexical Minifier API](API.md) / Exports
+Lexical Minifier API
 
 # Lexical Minifier API
 
