@@ -3,7 +3,7 @@ import type { MinifiedLexicalNode } from "./types";
 import { LexicalMinifier } from "./lexical-minifier";
 
 /**
- * takes a LexicalNode as an argument and returns a minified version of the serialized node.
+ * Takes a `LexicalNode` as an argument and returns a minified version of the serialized node.
  */
 export function minify(node: LexicalNode, min?: LexicalMinifier) {
   const minifier = min || new LexicalMinifier();
@@ -25,7 +25,7 @@ export function minify(node: LexicalNode, min?: LexicalMinifier) {
 }
 
 /**
- * takes a minified LexicalNode as an argument and returns the original, unminified version of the serialized node.
+ * Takes a minified `LexicalNode` as an argument and returns the original, unminified version of the serialized node.
  */
 export function unminify(node: MinifiedLexicalNode, min?: LexicalMinifier) {
   const minifier = min || new LexicalMinifier();

@@ -8,6 +8,10 @@
   "module": "./dist/index.module.js",
   "unpkg": "./dist/index.umd.js",
   "exports": "./dist/index.modern.mjs",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
@@ -26,6 +30,8 @@
   "devDependencies": {
     "@lexical/link": "^0.7.6",
     "lexical": "^0.7.6",
-    "microbundle": "^0.15.1"
+    "microbundle": "^0.15.1",
+    "typedoc": "^0.23.24",
+    "typedoc-plugin-markdown": "^3.14.0"
   }
 }

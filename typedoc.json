@@ -1,0 +1,25 @@
+ {
+  "theme": "markdown",
+  "readme": "README.md",
+  "name":"Lexical Minifier API",
+  "excludePrivate": true,
+  "excludeInternal": true,
+  "excludeProtected": true,
+  "excludeNotDocumented": true,
+  "hideMembersSymbol":false,
+  "githubPages": false,
+  "entryDocument":"API.md",
+  "out": "docs/api",
+  "entryPoints":["./src/index.ts"],
+  "hideInPageTOC":true,
+  "allReflectionsHaveOwnDocument":true,
+  "externalSymbolLinkMappings": {
+    "lexical": {
+      "SerializedLexicalNode":
+        "https://lexical.dev/docs/concepts/serialization",
+    
+    }
+  },
+  "cleanOutputDir": true,
+  "categorizeByGroup": false
+}

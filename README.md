@@ -1,1 +1,3 @@
 # lexical-minifier
+
+readme!!
