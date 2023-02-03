@@ -15,7 +15,7 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
@@ -28,10 +28,15 @@
   },
   "homepage": "https://github.com/fedemartinm/lexical-minifier#readme",
   "devDependencies": {
+    "@lexical/headless": "^0.7.6",
     "@lexical/link": "^0.7.6",
+    "@types/jest": "^29.4.0",
+    "jest": "^29.4.1",
     "lexical": "^0.7.6",
     "microbundle": "^0.15.1",
+    "ts-jest": "^29.0.5",
     "typedoc": "^0.23.24",
-    "typedoc-plugin-markdown": "^3.14.0"
+    "typedoc-plugin-markdown": "^3.14.0",
+    "typescript": "^4.9.5"
   }
 }
