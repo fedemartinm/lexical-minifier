@@ -28,8 +28,12 @@
   },
   "homepage": "https://github.com/fedemartinm/lexical-minifier#readme",
   "devDependencies": {
+    "@lexical/code": "^0.7.7",
     "@lexical/headless": "^0.7.6",
-    "@lexical/link": "^0.7.6",
+    "@lexical/link": "^0.7.7",
+    "@lexical/mark": "^0.7.7",
+    "@lexical/overflow": "^0.7.7",
+    "@lexical/rich-text": "^0.7.7",
     "@types/jest": "^29.4.0",
     "jest": "^29.4.1",
     "lexical": "^0.7.6",
