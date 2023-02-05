@@ -17,6 +17,18 @@ export class LexicalMinifier {
     return type in this.minifiers;
   }
 
+  private throwIfDuplicatedMinifier(minifier: any) {
+    const registered = Object.values(this.minifiers).find(
+      (min) => min.config.minifiedType === minifier.config.minifiedType,
+    );
+    if (registered && registered?.config.type !== minifier.config.type) {
+      throw new Error(
+        `Minifier with minified type '${minifier.config.minifiedType}' already exists ` +
+          `for a different type (${registered?.config.type}).`,
+      );
+    }
+  }
+
   /**
    * Use this method to register a new minifier.
    *
@@ -30,6 +42,16 @@ export class LexicalMinifier {
     type: T extends DefaultMinifiersType ? never : T,
     minifier: any,
   ) {
+    if (__DEV__) {
+      /* istanbul ignore next */
+      if (type in this.minifiers) {
+        console.warn(
+          `This package already includes a minifier for type ${type}. ` +
+            `If you intentionally want to replace the minifier, use the replace function to avoid this warning.`,
+        );
+      }
+    }
+    this.throwIfDuplicatedMinifier(minifier);
     this.minifiers = { ...this.minifiers, [type]: minifier };
   }
 
@@ -46,6 +68,16 @@ export class LexicalMinifier {
     type: T extends DefaultMinifiersType ? T : never,
     minifier: any,
   ) {
+    if (__DEV__) {
+      /* istanbul ignore next */
+      if (type in this.minifiers === false) {
+        console.warn(
+          `There are no registered minifiers for ${type}. ` +
+            `Check the specified type or use the register method.`,
+        );
+      }
+    }
+    this.throwIfDuplicatedMinifier(minifier);
     this.minifiers = { ...this.minifiers, [type]: minifier };
   }
 
@@ -58,6 +90,9 @@ export class LexicalMinifier {
     if (this.isRegistered(type)) {
       return this.minifiers[type];
     } else {
+      if (__DEV__) {
+        console.warn(`No minifier was found for type ${type}.`);
+      }
       return <Minifier>noMinifier;
     }
   }
@@ -74,6 +109,9 @@ export class LexicalMinifier {
     });
     if (typeof minifier !== "undefined") {
       return <Minifier>minifier;
+    }
+    if (__DEV__) {
+      console.warn(`No minifier was found for minified-type ${minifiedType}.`);
     }
     return <Minifier>noMinifier;
   }
