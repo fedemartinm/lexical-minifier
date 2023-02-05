@@ -35,6 +35,7 @@
     "@lexical/overflow": "^0.7.7",
     "@lexical/rich-text": "^0.7.7",
     "@types/jest": "^29.4.0",
+    "babel-plugin-dev-expression": "^0.2.3",
     "jest": "^29.4.1",
     "lexical": "^0.7.6",
     "microbundle": "^0.15.1",
