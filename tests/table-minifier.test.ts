@@ -19,7 +19,7 @@ describe("table-minifier", () => {
       d: 2,
       f: 6,
       i: 0,
-      t: "1",
+      t: "b",
       v: 1,
     });
 

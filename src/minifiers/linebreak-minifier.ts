@@ -4,7 +4,7 @@ import { buildMinifier } from "../builder";
 export default buildMinifier(
   {
     type: "linebreak",
-    minifiedType: "b",
+    minifiedType: "n",
     version: 1,
   },
   (_raw: SerializedLineBreakNode, config) => ({

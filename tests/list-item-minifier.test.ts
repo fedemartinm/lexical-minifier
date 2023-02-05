@@ -23,7 +23,7 @@ describe("list-item-minifier", () => {
       d: 2,
       f: 6,
       i: 0,
-      t: "i",
+      t: "e",
       v: 1,
     });
 

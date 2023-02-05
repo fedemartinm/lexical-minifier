@@ -25,7 +25,7 @@ describe("autolink-minifier", () => {
       r: "external",
       x: "_blank",
       u: "https://google.com/",
-      t: "a",
+      t: "u",
       v: 1,
     });
 

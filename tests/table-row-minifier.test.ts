@@ -21,7 +21,7 @@ describe("table-row-minifier", () => {
       d: 2,
       f: 6,
       i: 0,
-      t: "3",
+      t: "w",
       v: 1,
     });
 

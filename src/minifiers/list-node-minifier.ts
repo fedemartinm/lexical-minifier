@@ -5,7 +5,7 @@ import { buildMinifier } from "../builder";
 export default buildMinifier(
   {
     type: "list",
-    minifiedType: "n",
+    minifiedType: "i",
     version: 1,
   },
   (raw: SerializedListNode, config) => ({

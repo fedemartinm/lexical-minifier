@@ -25,7 +25,7 @@ describe("table-cell-minifier", () => {
       d: 2,
       f: 6,
       i: 0,
-      t: "2",
+      t: "y",
       v: 1,
     });
 

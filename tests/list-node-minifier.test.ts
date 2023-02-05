@@ -25,7 +25,7 @@ describe("list-minifier", () => {
       d: 2,
       f: 6,
       i: 0,
-      t: "n",
+      t: "i",
       v: 1,
     });
 

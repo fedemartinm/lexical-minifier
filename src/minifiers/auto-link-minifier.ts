@@ -5,7 +5,7 @@ import { buildMinifier } from "../builder";
 export default buildMinifier(
   {
     type: "autolink",
-    minifiedType: "a",
+    minifiedType: "u",
     version: 1,
   },
   (raw: SerializedAutoLinkNode, config) => ({

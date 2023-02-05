@@ -10,7 +10,7 @@ describe("linebreak-minifier", () => {
     const minified = lineBreakMinifier.minify(serialized);
 
     expect(minified).toEqual({
-      t: "b",
+      t: "n",
       v: 1,
     });
 

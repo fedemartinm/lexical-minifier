@@ -5,7 +5,7 @@ import { buildMinifier } from "../builder";
 export default buildMinifier(
   {
     type: "table",
-    minifiedType: "1",
+    minifiedType: "b",
     version: 1,
   },
   (raw: SerializedTableNode, config) => ({
