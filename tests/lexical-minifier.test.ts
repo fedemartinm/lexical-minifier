@@ -82,8 +82,12 @@ describe("lexical-minifier", () => {
       type: "video",
       version: 1,
     };
+    const consoleWarnMock = jest.spyOn(console, "warn").mockImplementation();
 
     expect(minifier.get("video").minify(data)).toBe(data);
     expect(minifier.getByMinifiedType("video").unminify(data)).toBe(data);
+    expect(console.warn).toHaveBeenCalledTimes(2);
+
+    consoleWarnMock.mockRestore();
   });
 });

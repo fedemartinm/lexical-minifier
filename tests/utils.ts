@@ -1,28 +1,3 @@
-import { createHeadlessEditor } from "@lexical/headless";
-
-type LexicalEditorHelper = {
-  create: <T>($createNode: () => T | PromiseLike<T>) => Promise<T>;
-};
-
-export function initializeUnitTest(
-  runTests: (editor: LexicalEditorHelper) => void,
-) {
-  const editor = createHeadlessEditor();
-
-  const create: LexicalEditorHelper["create"] = ($createNode) => {
-    return new Promise((resolve) => {
-      editor.update(() => {
-        resolve($createNode());
-      });
-    });
-  };
-
-  runTests({
-    create,
-  });
-}
-///////
-
 type Shape<T> = {
   [key in keyof T]: any;
 };

@@ -6,6 +6,7 @@
     "<rootDir>/src/**",
     "!<rootDir>/src/index.ts",
     "!<rootDir>/src/types.ts",
+    "!<rootDir>/src/builder.ts",
     "!<rootDir>/src/built-in-minifiers.ts",
     "!<rootDir>/src/lookups/lookup-data.ts",
     "!<rootDir>/src/minifiers/no-minifier.ts",

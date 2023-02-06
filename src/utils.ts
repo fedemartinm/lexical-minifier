@@ -12,9 +12,11 @@ export function minify(node: LexicalNode, min?: LexicalMinifier) {
   const minified = nodeMinifier.minify(node.exportJSON());
 
   // $isElementNode replacement
-  if (Object.getPrototypeOf(node.constructor).name === "ElementNode") {
+  if (
+    Object.getPrototypeOf(node.constructor).name === "ElementNode" ||
+    typeof node.getChildren === "function"
+  ) {
     const children = node.getChildren();
-
     children.forEach((child: any) => {
       const serializedChildNode = minify(child, minifier);
       minified.c.push(serializedChildNode);
