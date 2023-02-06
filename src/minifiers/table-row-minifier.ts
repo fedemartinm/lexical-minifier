@@ -1,5 +1,5 @@
-import { SerializedTableRowNode } from "@lexical/table";
-import { direction, format } from "../lookups/lookup-data";
+import type { SerializedTableRowNode } from "@lexical/table";
+import elementMinifier from "./element-minifier";
 import { buildMinifier } from "../builder";
 
 export default buildMinifier(
@@ -9,20 +9,14 @@ export default buildMinifier(
     version: 1,
   },
   (raw: SerializedTableRowNode, config) => ({
+    ...elementMinifier.minify(raw),
     h: raw.height,
-    c: raw.children,
-    d: direction.toKey(raw.direction),
-    f: format.toKey(raw.format),
-    i: raw.indent,
     t: config.minifiedType,
     v: config.version,
   }),
   (minified, config) => ({
+    ...elementMinifier.unminify(minified),
     height: minified.h,
-    children: minified.c,
-    direction: direction.fromKey(minified.d),
-    format: format.fromKey(minified.f),
-    indent: minified.i,
     type: config.type,
     version: config.version,
   }),

@@ -1,5 +1,5 @@
 import type { SerializedLinkNode } from "@lexical/link";
-import { direction, format } from "../lookups/lookup-data";
+import elementMinifier from "./element-minifier";
 import { buildMinifier } from "../builder";
 
 export default buildMinifier(
@@ -9,10 +9,8 @@ export default buildMinifier(
     version: 1,
   },
   (raw: SerializedLinkNode, config) => ({
-    c: raw.children,
-    d: direction.toKey(raw.direction),
-    f: format.toKey(raw.format),
-    i: raw.indent,
+    ...elementMinifier.minify(raw),
+
     r: raw.rel,
     x: raw.target,
     u: raw.url,
@@ -20,10 +18,7 @@ export default buildMinifier(
     v: config.version,
   }),
   (minified, config) => ({
-    children: minified.c,
-    direction: direction.fromKey(minified.d),
-    format: format.fromKey(minified.f),
-    indent: minified.i,
+    ...elementMinifier.unminify(minified),
     rel: minified.r,
     target: minified.x,
     url: minified.u,

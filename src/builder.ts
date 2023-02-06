@@ -48,3 +48,20 @@ export function buildMinifier<
     unminify,
   };
 }
+
+/** @internal */
+export function buildPartialMinifier<K, U>(
+  minifyFunc: (data: K) => U,
+  unminifyFunc: (data: U) => K,
+) {
+  const minify = (data: K) => {
+    return minifyFunc(data);
+  };
+  const unminify = (data: U) => {
+    return unminifyFunc(data);
+  };
+  return {
+    minify,
+    unminify,
+  };
+}
