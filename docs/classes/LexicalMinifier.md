@@ -26,7 +26,7 @@ default `noop` minifier.
 
 #### Defined in
 
-[lexical-minifier.ts:57](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/lexical-minifier.ts#L57)
+[lexical-minifier.ts:89](https://github.com/fedemartinm/lexical-minifier/blob/9a17751/src/lexical-minifier.ts#L89)
 
 ___
 
@@ -49,7 +49,7 @@ Otherwise, return the default `noop` minifier.
 
 #### Defined in
 
-[lexical-minifier.ts:69](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/lexical-minifier.ts#L69)
+[lexical-minifier.ts:104](https://github.com/fedemartinm/lexical-minifier/blob/9a17751/src/lexical-minifier.ts#L104)
 
 ___
 
@@ -73,7 +73,7 @@ Register and replace are essentially the same method, the difference is in the t
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `type` | `T` extends ``"text"`` \| ``"link"`` \| ``"root"`` \| ``"linebreak"`` \| ``"paragraph"`` ? `never` : `T` | lexical type |
+| `type` | `T` extends ``"text"`` \| ``"link"`` \| ``"root"`` \| ``"code"`` \| ``"mark"`` \| ``"quote"`` \| ``"heading"`` \| ``"overflow"`` \| ``"autolink"`` \| ``"linebreak"`` \| ``"paragraph"`` \| ``"listitem"`` \| ``"list"`` \| ``"table"`` \| ``"tablerow"`` \| ``"tablecell"`` ? `never` : `T` | lexical type |
 | `minifier` | `any` | minifier created with buildMinifier method |
 
 #### Returns
@@ -82,7 +82,7 @@ Register and replace are essentially the same method, the difference is in the t
 
 #### Defined in
 
-[lexical-minifier.ts:29](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/lexical-minifier.ts#L29)
+[lexical-minifier.ts:41](https://github.com/fedemartinm/lexical-minifier/blob/9a17751/src/lexical-minifier.ts#L41)
 
 ___
 
@@ -106,7 +106,7 @@ Register and replace are essentially the same method, the difference is in the t
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `type` | `T` extends ``"text"`` \| ``"link"`` \| ``"root"`` \| ``"linebreak"`` \| ``"paragraph"`` ? `T` : `never` | lexical type |
+| `type` | `T` extends ``"text"`` \| ``"link"`` \| ``"root"`` \| ``"code"`` \| ``"mark"`` \| ``"quote"`` \| ``"heading"`` \| ``"overflow"`` \| ``"autolink"`` \| ``"linebreak"`` \| ``"paragraph"`` \| ``"listitem"`` \| ``"list"`` \| ``"table"`` \| ``"tablerow"`` \| ``"tablecell"`` ? `T` : `never` | lexical type |
 | `minifier` | `any` | minifier created with buildMinifier method |
 
 #### Returns
@@ -115,4 +115,4 @@ Register and replace are essentially the same method, the difference is in the t
 
 #### Defined in
 
-[lexical-minifier.ts:45](https://github.com/fedemartinm/lexical-minifier/blob/58fd6f9/src/lexical-minifier.ts#L45)
+[lexical-minifier.ts:67](https://github.com/fedemartinm/lexical-minifier/blob/9a17751/src/lexical-minifier.ts#L67)

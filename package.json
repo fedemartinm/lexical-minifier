@@ -15,6 +15,7 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
+    "docs": "typedoc",
     "test": "jest --verbose --coverage"
   },
   "repository": {
