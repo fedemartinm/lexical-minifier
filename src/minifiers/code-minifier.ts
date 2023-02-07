@@ -1,6 +1,7 @@
 import type { SerializedCodeNode } from "@lexical/code";
 import elementMinifier from "./element-minifier";
 import { buildMinifier } from "../builder";
+import { omitDefault, restoreDefault } from "../default-values";
 
 export default buildMinifier(
   {
@@ -10,13 +11,13 @@ export default buildMinifier(
   },
   (raw: SerializedCodeNode, config) => ({
     ...elementMinifier.minify(raw),
-    l: raw.language,
+    ...omitDefault("l", raw.language, undefined),
     t: config.minifiedType,
     v: config.version,
   }),
   (minified, config) => ({
     ...elementMinifier.unminify(minified),
-    language: minified.l,
+    language: restoreDefault(minified.l, undefined),
     type: config.type,
     version: config.version,
   }),

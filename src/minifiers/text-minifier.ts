@@ -1,6 +1,7 @@
 import type { SerializedTextNode } from "lexical";
 import { mode } from "../lookups/lookup-data";
 import { buildMinifier } from "../builder";
+import { omitDefault, restoreDefault } from "../default-values";
 
 export default buildMinifier(
   {
@@ -9,20 +10,20 @@ export default buildMinifier(
     version: 1,
   },
   (raw: SerializedTextNode, config) => ({
-    d: raw.detail,
-    f: raw.format,
-    m: mode.toKey(raw.mode),
-    s: raw.style,
-    x: raw.text,
+    ...omitDefault("d", raw.detail, 0),
+    ...omitDefault("f", raw.format, 0),
+    ...omitDefault("m", mode.toKey(raw.mode), 0),
+    ...omitDefault("s", raw.style, ""),
+    ...omitDefault("x", raw.text, ""),
     t: config.minifiedType,
     v: config.version,
   }),
   (minified, config) => ({
-    detail: minified.d,
-    format: minified.f,
-    mode: mode.fromKey(minified.m),
-    style: minified.s,
-    text: minified.x,
+    detail: restoreDefault(minified.d, 0),
+    format: restoreDefault(minified.f, 0),
+    mode: mode.fromKey(restoreDefault(minified.m, 0)),
+    style: restoreDefault(minified.s, ""),
+    text: restoreDefault(minified.x, ""),
     type: config.type,
     version: config.version,
   }),

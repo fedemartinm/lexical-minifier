@@ -3,7 +3,7 @@ import type { SerializedListNode } from "@lexical/list";
 import type { SerializedParagraphNode, SerializedTextNode } from "lexical";
 import { LookupTable } from "./lookup-table";
 
-export const listTag = new LookupTable<SerializedListNode["tag"]>(["ol", "ul"]);
+export const listTag = new LookupTable<SerializedListNode["tag"]>(["ul", "ol"]);
 
 export const listType = new LookupTable<SerializedListNode["listType"]>([
   "bullet",
