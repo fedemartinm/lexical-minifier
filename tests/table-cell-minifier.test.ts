@@ -18,13 +18,10 @@ describe("table-cell-minifier", () => {
     const minified = tableCellMinifier.minify(serialized);
 
     expect(minified).toEqual({
-      h: 0,
       w: 100,
-      s: 1,
       c: [],
       d: 2,
       f: 6,
-      i: 0,
       t: "y",
       v: 1,
     });

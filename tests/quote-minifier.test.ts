@@ -18,7 +18,6 @@ describe("quote-minifier", () => {
       c: [],
       d: 2,
       f: 6,
-      i: 0,
       t: "q",
       v: 1,
     });

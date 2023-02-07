@@ -21,7 +21,6 @@ describe("link-minifier", () => {
       c: [],
       d: 1,
       f: 1,
-      i: 0,
       r: "external",
       x: "_blank",
       u: "https://github.com/",

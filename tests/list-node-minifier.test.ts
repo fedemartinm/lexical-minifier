@@ -6,8 +6,8 @@ describe("list-minifier", () => {
   it("should minify and unminify data correctly", async () => {
     const serialized: SerializedListNode = {
       listType: "bullet",
-      start: 0,
-      tag: "ol",
+      start: 1,
+      tag: "ul",
       children: [],
       type: "list",
       direction: "rtl",
@@ -18,13 +18,9 @@ describe("list-minifier", () => {
     const minified = listNodeMinifier.minify(serialized);
 
     expect(minified).toEqual({
-      q: 0,
-      w: 0,
-      s: 0,
       c: [],
       d: 2,
       f: 6,
-      i: 0,
       t: "i",
       v: 1,
     });

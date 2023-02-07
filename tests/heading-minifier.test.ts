@@ -17,10 +17,8 @@ describe("heading-minifier", () => {
 
     expect(minified).toEqual({
       c: [],
-      h: 0,
       d: 2,
       f: 6,
-      i: 0,
       t: "h",
       v: 1,
     });

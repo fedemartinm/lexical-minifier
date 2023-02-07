@@ -6,8 +6,8 @@ describe("autolink-minifier", () => {
   it("should minify and unminify data correctly", async () => {
     const serialized: SerializedAutoLinkNode = {
       children: [],
-      direction: "ltr",
-      format: "center",
+      direction: null,
+      format: "",
       indent: 0,
       rel: "external",
       target: "_blank",
@@ -19,9 +19,6 @@ describe("autolink-minifier", () => {
 
     expect(minified).toEqual({
       c: [],
-      d: 1,
-      f: 1,
-      i: 0,
       r: "external",
       x: "_blank",
       u: "https://google.com/",
@@ -40,8 +37,8 @@ describe("autolink-minifier", () => {
       direction: oneOf("ltr", "rtl", null),
       format: oneOf("left", "start", "center", "right", "end", "justify", ""),
       indent: oneOf(0, 1, 2),
-      rel: oneOf("external", "apple-touch-icon-precomposed"),
-      target: oneOf("_blank", "_self"),
+      rel: oneOf(null, "external", "apple-touch-icon-precomposed"),
+      target: oneOf(null, "_blank", "_self"),
       url: oneOf("https://github.com/", "https://google.com/"),
       type: "autolink",
       version: 1,

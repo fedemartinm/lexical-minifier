@@ -16,8 +16,6 @@ describe("overflow-minifier", () => {
 
     expect(minified).toEqual({
       c: [],
-      d: 0,
-      f: 0,
       i: 1,
       t: "o",
       v: 1,

@@ -8,7 +8,7 @@ describe("text-minifier", () => {
       detail: 0,
       format: 0,
       mode: "normal",
-      style: "style",
+      style: "",
       text: "text node",
       type: "text",
       version: 1,
@@ -16,10 +16,6 @@ describe("text-minifier", () => {
     const minified = textMinifier.minify(serialized);
 
     expect(minified).toEqual({
-      d: 0,
-      f: 0,
-      m: 0,
-      s: "style",
       x: "text node",
       t: "t",
       v: 1,

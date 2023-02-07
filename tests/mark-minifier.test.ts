@@ -18,9 +18,6 @@ describe("mark-minifier", () => {
     expect(minified).toEqual({
       y: ["a", "b", "c"],
       c: [],
-      d: 0,
-      f: 0,
-      i: 0,
       t: "m",
       v: 1,
     });

@@ -18,7 +18,6 @@ describe("paragraph-minifier", () => {
       c: [],
       d: 2,
       f: 6,
-      i: 0,
       t: "p",
       v: 1,
     });

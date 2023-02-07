@@ -20,7 +20,6 @@ describe("code-minifier", () => {
       l: "javascript",
       d: 2,
       f: 6,
-      i: 0,
       t: "c",
       v: 1,
     });

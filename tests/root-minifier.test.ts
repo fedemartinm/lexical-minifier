@@ -16,9 +16,6 @@ describe("root-minifier", () => {
 
     expect(minified).toEqual({
       c: [],
-      d: 0,
-      f: 0,
-      i: 0,
       t: "r",
       v: 1,
     });
