@@ -16,7 +16,7 @@ import { CodeNode, CodeHighlightNode } from "@lexical/code";
 import { TableNode, TableRowNode, TableCellNode } from "@lexical/table";
 
 import { createHeadlessEditor } from "@lexical/headless";
-import { minify, unminify } from "../src/utils";
+import { fromArrayPack, minify, toArrayPack, unminify } from "../src/utils";
 
 export default function prepopulatedText() {
   const root = $getRoot();
@@ -89,7 +89,9 @@ describe("text-minifier-utils", () => {
     editor.update(() => {
       const minified = minify($getRoot());
       const serialized = unminify(minified);
+      const arrayPack = toArrayPack(minified);
 
+      expect(minified).toEqual(fromArrayPack(arrayPack));
       expect(serialized).toEqual(editorState.root);
     });
   });
