@@ -47,3 +47,19 @@ export interface Minifier<
   minify: (data: I) => O;
   unminify: (data: O) => I;
 }
+
+/**
+ * ArrayPackNode type represents a node tree in a minimal way using arrays.
+ *
+ * ```js
+ * [
+ *     "t", // A string representing the node name. If it is not present, it is assumed to be 'r'.
+ *      1 ,   // A number representing the node version. If it is not present, it is assumed to be 1.
+ *     [ ], // An optional array with child nodes.
+ *     { }, // An optional object with node properties.
+ * ]
+ * ```
+ * @noInheritDoc
+ */
+export interface ArrayPackNode
+  extends Array<undefined | string | number | object | ArrayPackNode[]> {}

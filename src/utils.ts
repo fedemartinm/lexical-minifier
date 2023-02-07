@@ -1,5 +1,5 @@
 import type { LexicalNode } from "lexical";
-import type { MinifiedLexicalNode } from "./types";
+import type { ArrayPackNode, MinifiedLexicalNode } from "./types";
 import { LexicalMinifier } from "./lexical-minifier";
 
 /**
@@ -41,4 +41,57 @@ export function unminify(node: MinifiedLexicalNode, min?: LexicalMinifier) {
     );
   }
   return serialized;
+}
+
+/**
+ * Transforms a MinifiedLexicalNode into its minimal representation using arrays.
+ * @param node The MinifiedLexicalNode to be transformed.
+ * @returns The transformed ArrayPackNode.
+ */
+export function toArrayPack(node: MinifiedLexicalNode) {
+  const pack: ArrayPackNode = [];
+
+  const { t, v, c, ...props } = node;
+
+  if (t !== "r") {
+    pack.push(t);
+  }
+
+  if (v !== 1) {
+    pack.push(v);
+  }
+
+  if (Object.keys(props).length > 0) {
+    pack.push(props);
+  }
+
+  if (Array.isArray(c) && c.length) {
+    pack.push(c.map(toArrayPack));
+  }
+  return pack;
+}
+
+/**
+ * Transforms an ArrayPackNode into its original MinifiedLexicalNode representation.
+ * @param pack The ArrayPackNode to be transformed.
+ * @returns The transformed MinifiedLexicalNode.
+ */
+export function fromArrayPack(pack: ArrayPackNode) {
+  let node: MinifiedLexicalNode = {
+    t: "r",
+    v: 1,
+  };
+
+  pack.forEach((element) => {
+    if (typeof element === "string") {
+      node.t = element;
+    } else if (typeof element === "number") {
+      node.v = element;
+    } else if (Array.isArray(element)) {
+      node.c = element.map(fromArrayPack);
+    } else if (typeof element === "object") {
+      node = { ...node, ...element };
+    }
+  });
+  return node;
 }
