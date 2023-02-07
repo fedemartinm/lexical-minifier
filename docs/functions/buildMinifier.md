@@ -38,4 +38,4 @@ with the MinifierConfig before applying the corresponding minification or unmini
 
 #### Defined in
 
-[builder.ts:15](https://github.com/fedemartinm/lexical-minifier/blob/9a17751/src/builder.ts#L15)
+[src/builder.ts:15](https://github.com/fedemartinm/lexical-minifier/blob/5f60062/src/builder.ts#L15)

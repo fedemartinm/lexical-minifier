@@ -19,4 +19,4 @@ Takes a minified `LexicalNode` as an argument and returns the original, unminifi
 
 #### Defined in
 
-[utils.ts:32](https://github.com/fedemartinm/lexical-minifier/blob/9a17751/src/utils.ts#L32)
+[src/utils.ts:32](https://github.com/fedemartinm/lexical-minifier/blob/5f60062/src/utils.ts#L32)
