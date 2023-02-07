@@ -1,6 +1,6 @@
 # Lexical Minifier
 
-Exporting the state of the lexical editor can result in a large and unoptimized JSON structure. This package offers a solution by minifying and unminifying the code produced by the lexical editor, reducing the time it takes to obtain or send the serialized state in a request and freeing up valuable storage space. 
+Exporting the state of the [lexical editor](https://github.com/facebook/lexical) can result in a large and unoptimized JSON structure. This package offers a solution by minifying and unminifying the code produced by the lexical editor, reducing the time it takes to obtain or send the serialized state in a request and freeing up valuable storage space. 
 
 
 ### How does the package work?
@@ -42,6 +42,18 @@ And transform the nodes to array pack to further reduce the size:
 ["t",{"x":", "}],["t",{"f":2,"x":"italic"}],["t",{"x":" and so on."}]]]]]
 ```
 
+### Installation
+
+```shell
+yarn add lexical-minifier
+```
+
+or
+
+```shell
+npm install lexical-minifier --save
+```
+
 ### Usage
 ```js
 editor.update(() => {
@@ -63,7 +75,7 @@ editor.update(() => {
 This package aims to minify all the nodes included in the lexical package and its official modules. 
 Below is a list of nodes that are supported by default. If you have created a custom node, you can easily write your minifier. If there is an existing plugin that you think should be included in this package, please open an issue and we'll check it.
 
-`root`, `text`, `link`, `code`, `mark`, `table`, `quote`, `list`, `heading`, `listitem`, `overflow`, `autolink`, `tablerow`, `tablecell`, `linebreak`, `paragraph`, 
+`root`, `text`, `link`, `code`, `mark`, `table`, `quote`, `list`, `heading`, `listitem`, `overflow`, `autolink`, `tablerow`, `tablecell`, `linebreak`, `paragraph`
 
 ### Testing 
 
@@ -75,7 +87,7 @@ In the Arraypack format, each node has the following structure:
 ```js
 [
     "t", // A string representing the node name. If it is not present, it is assumed to be 'r'.
-         // A number representing the node version. If it is not present, it is assumed to be 1.
+     1 , // A number representing the node version. If it is not present, it is assumed to be 1.
     [ ], // An optional array with child nodes.
     { }, // An optional object with node properties.
 ]
