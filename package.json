@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "lexical-minifier",
-  "description": "Lexical",
+  "description": "A minifier that allows for compressing and decompressing the JSON data exported by the lexical editor.",
   "type": "module",
   "source": "./src/index.ts",
   "main": "./dist/index.cjs",
@@ -24,6 +24,12 @@
   },
   "author": "Fede Martin",
   "license": "MIT",
+  "keywords": [
+    "minifier",
+    "minify",
+    "lexical",
+    "editor"
+  ],
   "bugs": {
     "url": "https://github.com/fedemartinm/lexical-minifier/issues"
   },
