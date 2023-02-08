@@ -1,3 +1,6 @@
+![npm](https://img.shields.io/npm/v/lexical-minifier) 
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/lexical-minifier?color=green)
+
 # Lexical Minifier
 
 Exporting the state of the [lexical editor](https://github.com/facebook/lexical) can result in a large and unoptimized JSON structure. This package offers a solution by minifying and unminifying the code produced by the lexical editor, reducing the time it takes to obtain or send the serialized state in a request and freeing up valuable storage space. 
@@ -11,6 +14,10 @@ Its philosophy is to create a simple and secure minification through the use of 
 - Shortening property length to one character
 - Removing default values
 - Providing complete reversibility to the original state.
+
+### Testing 
+
+Unit testing has been conducted to ensure the functionality and reliability of the code. The test-coverage also checks all the minifiers included in the package to guarantee that every aspect has been thoroughly tested and optimized for optimal performance. 
 
 ### Example
 
@@ -55,6 +62,9 @@ npm install lexical-minifier --save
 ```
 
 ### Usage
+
+The following code snippet demonstrates the usage of this package. You can also see a demo and usage examples in this [sandbox](https://codesandbox.io/s/lexical-minifier-pqwwg7?file=/src/plugins/MinifierPlugin.js).
+
 ```js
 editor.update(() => {
   // get the minified state, to persist it or do what is necessary
@@ -73,17 +83,55 @@ editor.update(() => {
 ### Built-in minifiers
 
 This package aims to minify all the nodes included in the lexical package and its official modules. 
-Below is a list of nodes that are supported by default. If you have created a custom node, you can easily write your minifier. If there is an existing plugin that you think should be included in this package, please open an issue and we'll check it.
+Below is a list of nodes that are supported by default. If you have created a custom node, you can easily write your minifier. If there is an existing node that you think should be included in this package, please open an [issue](https://github.com/fedemartinm/lexical-minifier/issues) and we'll check it.
 
 `root`, `text`, `link`, `code`, `mark`, `table`, `quote`, `list`, `heading`, `listitem`, `overflow`, `autolink`, `tablerow`, `tablecell`, `linebreak`, `paragraph`
 
-### Testing 
+### Writing a custom minifier
 
-Unit testing has been conducted to ensure the functionality and reliability of the code. The test-coverage also checks all the minifiers included in the package to guarantee that every aspect has been thoroughly tested and optimized for optimal performance. 
+Below is a basic example of how to write a custom minifier. You can see the complete API documentation [here](https://github.com/fedemartinm/lexical-minifier/tree/main/docs).
 
-### Arraypack: 
+```js
+
+// as a pre-requisite, your node must implement the exportJSON() method. 
+// the first step is to define a minifier for your node:
+const videoMinifier = buildMinifier(
+  {
+    type: "video",
+    minifiedType: "v",
+    version: 1,
+  },
+  (serialized: SerializedVideoNode, config) => ({
+    // here you must write the logic to minify the serialized object
+    // this package provide some tools like lookup-table and removeDefault
+    a: serialized.autoplay,
+    // these fields are required
+    t: config.minifiedType,
+    v: config.version,
+  }),
+  (minified, config) => ({
+    autoplay: minified.a,
+    // these fields are required
+    type: config.type,
+    version: config.version,
+  })
+);
+
+// then you must create an instance of the lexical minifier class and register the new node minifier
+const lexicalMinifier = new LexicalMinifier();
+lexicalMinifier.register("video", videoMinifier);
+
+// now you can minify and un-minify your state by passing the lexical minifier class as an argument
+const minifiedData = minify(state, lexicalMinifier);
+const serializedData = unminify(minifiedData, lexicalMinifier)
+```
+
+### Arraypack
+
+The package is designed to use the result of the `minify()` and `unminify()` functions. Nevertheless, if you need a higher minification ratio, you can try using the array-pack format, which is a way of representing minified nodes using arrays.
 
 In the Arraypack format, each node has the following structure:
+
 ```js
 [
     "t", // A string representing the node name. If it is not present, it is assumed to be 'r'.
@@ -93,8 +141,9 @@ In the Arraypack format, each node has the following structure:
 ]
 ```
 
-A hello world example would be the following: 
+A simple paragraph would look like this:
+
 ```js
-["r",[["p",[["t",{"x":"Welcome to the Markdown example"}]]]]]
+[[["p",[["t",{"x":"Hello World"}]]]]]
 ```
 
