@@ -53,11 +53,11 @@ export function toArrayPack(node: MinifiedLexicalNode) {
 
   const { t, v, c, ...props } = node;
 
-  if (t !== "r") {
+  if (typeof t === "string" && t !== "r") {
     pack.push(t);
   }
 
-  if (v !== 1) {
+  if (typeof v === "number" && v !== 1) {
     pack.push(v);
   }
 
@@ -77,10 +77,7 @@ export function toArrayPack(node: MinifiedLexicalNode) {
  * @returns The transformed MinifiedLexicalNode.
  */
 export function fromArrayPack(pack: ArrayPackNode) {
-  let node: MinifiedLexicalNode = {
-    t: "r",
-    v: 1,
-  };
+  let node: any = {};
 
   pack.forEach((element) => {
     if (typeof element === "string") {
@@ -93,5 +90,14 @@ export function fromArrayPack(pack: ArrayPackNode) {
       node = { ...node, ...element };
     }
   });
-  return node;
+
+  if (typeof node.t === "undefined" && typeof node.type === "undefined") {
+    node.t = "r";
+  }
+  if (typeof node.v === "undefined" && typeof node.version === "undefined") {
+    node.v = 1;
+  }
+
+  // Consider rewriting the types as MaybeMinifiedLexicalNode to properly type non-minified nodes
+  return node as MinifiedLexicalNode;
 }
