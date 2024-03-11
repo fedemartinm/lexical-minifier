@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "lexical-minifier",
   "description": "A minifier that allows for compressing and decompressing the JSON data exported by the lexical editor.",
   "type": "module",
